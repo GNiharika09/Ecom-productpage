@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" async></script>
+    <title>E-commerce Website </title>
+</head>
+<body>
+            <!--Navbar-->
+            <nav>
+                <!--Navbar has two part the top one and the bottom one-->
+                <!--Here is top one and in this part I put logo, my account part, and the shopping cart-->
+                <div class="navbar-top">
+                    <div>
+                        <button id="menuButton"><i class="fas fa-bars"></i></button>
+                        <!--Logo-->
+                        <a href="index.html">
+                            
+                            <img src="img/logo.PNG" style="width: 70px; height: 70px;">
+                        </a>
+                    </div>
+                    <div>
+                     
+                        <!--My account part-->
+                        <div class="account">
+                            <a href="index.html">
+                                <button class="account-btn">
+                                    <i class="fas fa-user-alt"></i>
+                                </button>
+                                <span class="account-text">My account</span>
+                            </a>
+                            <!--When we click the btnShowAccountInfo this section will be displayed-->
+                        </div>
+                        <!--Shopping cart-->
+                        <div class="shopping-cart">
+                            <div class="sum-prices">
+                                <!--Shopping cart logo-->
+                                <i
+                                    class="fas fa-shopping-cart shoppingCartButton"
+                                ></i>
+                                <!--The total prices of products in the shopping cart -->
+                                <h6 id="sum-prices"></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navbar bottom part -->
+                <!-- Here I put the links to the other pages or nav links -->
+                <div class="navbar" id="navbar">
+                    <div class="links">
+                        <ul>
+                            <li class="nav-links">
+                                <a href="#" class="link">Titan</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="#" class="link">Omega</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="#" class="link">Citizen</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="#" class="link">Fossil</a>
+                                <li class="nav-links">
+                                    <a href="#" class="link">Fast Track</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="#" class="link">Rolex</a>
+                            </li>
+                            <li class="nav-links">
+                                <a href="#" class="link">More</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- The searchbar which will be in the right side of the links -->
+                    <div class="searchbar">
+                        <form action="#">
+                            <input type="search" placeholder="Search here.." />
+                            <i class="fa fa-search" id="search-icon"></i>
+                        </form>
+                    </div>
+                </div>
+                <div class="producstOnCart hide">
+                    <div class="overlay"></div>
+                    <div class="top">
+                        <button id="closeButton">
+                            <i class="fas fa-times-circle"></i>
+                        </button>
+                        <h3>Cart</h3>
+                    </div>
+                    <ul id="buyItems">
+                        <h4 class="empty">Your shopping cart is empty</h4>
+                        <li class="buyItem">
+                            <img src="Images/producs-images/Mobiles/galaxynote10.png">
+                            <div>
+                                <h5>Products Name</h5>
+                                <h6>$199</h6>
+                                <div>
+                                    <button>-</button>
+                                    <span class="countOfProduct">1</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                        </li> 
+                    </ul>
+                    <button class="btn checkout hidden">Check out</button>
+                </div>
+            </nav>
+            <header>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext"></div>
+                      <img src="img/header.jpg" style="width:100%">
+                    
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext"></div>
+                      <img src="img/ss1.jpg" style="width:100%; height: 340px;">
+                    
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext"></div>
+                      <img src="img/ss.2.jfif" style="width:100%; height: 340px;">
+                    
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <img src="img/ss.3.jpg" style="width:100%; height: 340px;">
+                      
+                      </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                      <span class="dot" onclick="currentSlide(4)"></span> 
+
+                    </div>
+            </header>
+            <br><br><br><br>
+            <section id="feature" class="section-p1">
+                <div class="fe-box">
+                  <img src="https://i.postimg.cc/PrN2Y6Cv/f1.png" alt="">
+                  <h6>Free Shipping</h6>
+                </div>
+                
+                <div class="fe-box">
+                  <img src="https://i.postimg.cc/qvycxW4q/f2.png" alt="">
+                  <h6>Online Order</h6>
+                </div>
+                
+                <div class="fe-box">
+                  <img src="https://i.postimg.cc/1Rdphyz4/f3.png" alt="">
+                  <h6>Save Money</h6>
+                </div>
+                
+                <div class="fe-box">
+                  <img src="https://i.postimg.cc/GpYc2JFZ/f4.png" alt="">
+                  <h6>Promotions</h6>
+                </div>
+                
+                <div class="fe-box">
+                  <img src="https://i.postimg.cc/4yFCwmv6/f5.png" alt="">
+                  <h6>Happy Sell</h6>
+                </div>
+                
+                <div class="fe-box">
+                  <img src="https://i.postimg.cc/gJN1knTC/f6.png" alt="">
+                  <h6>F24/7 Support</h6>
+                </div>
+                
+              </section>
+              <section id="product1" class="section-p1">
+              <h2>Featured Products</h2>
+  <p>Summer Collection New Modern Design</p>
+  </section>
+    <section class="container">
+        <div class="container-items">
+            <div class="item">
+                <span class="title-item">Swatch Boxengasse watch</span>
+                <img src="img/boxengasse.png" alt="" class="img-item"><br>
+                <span class="not-bold">Swatch Unisex Dial & Stainless Steel Straps Analogue Watch YV423GC</span>
+                <span class="cost-item"> $16.000</span>
+                <button class="botton-item">Add to Cart</button>
+            </div>
+            <div class="item">
+                <span class="title-item">English Horse Women's Watch </span>
+                <img src="img/englishrose.png" alt="" class="img-item">
+                <span class="not-bold">Swatch Unisex White & Pink Straps Analogue Watch LP150</span>
+                <span class="cost-item">$25.000</span>
+                <button class="botton-item">Add to Cart</button>
+            </div>
+            <div class="item">
+                <span class="title-item">New Swiss Watch Originals</span>
+                <img src="img/knocknap.png" alt="" class="img-item">
+                <span class="not-bold">Original Swiss Swatch Originals KNOCK NAP Blue silicone watch</span>
+                <span class="cost-item">$35.000</span>
+                <button class="botton-item">Add to Cart</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Titan Watch</span>
+                <img src="img/lanight.png" alt="" class="img-item">
+                <span class="not-bold">Titan Company Watch Titan Ceramics Strap,sapphire</span>
+                <span class="cost-item">$18.000</span>
+                <button class="botton-item">Add to Cart</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Fossil Watch</span><br>
+                <img src="img/silverall.png" alt="" class="img-item">
+                <span class="not-bold">strap Navy blue Fossil Group Leather, fossil watch Accessory, leather, accessories</span>
+                <span class="cost-item">$32.000</span>
+                <button class="botton-item">Add to Cart</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Omega SA Watch</span>
+                <img src="img/skinglam.png" alt="" class="img-item">
+    
+                <span class="not-bold">Omega SA Watch Jewellery Quartz clock Colored gold female watch</span>
+                <span class="cost-item">$18.000</span>
+                <button class="botton-item">Add to Cart</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Citizen Eco drive Watch</span>
+                <img src="img/midimix.png" alt="" class="img-item">
+                <span class="not-bold">Eco-Drive Watch strap Citizen Holdings Watch strap, Citizen Eco-Drive Ladies Watch, white, driving, watch Accessory png</span>
+                <span class="cost-item">$54.000</span>
+                <button class="botton-item">Add to Cart</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Schaffhausen International Watch</span>
+                <img src="img/sirblue.png" alt="" class="img-item">
+                <span class="cost-item">$32.000</span>
+                <button class="botton-item">Add to Cart</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Rolex Watch</span>
+                <img src="img/middlesteel.png" alt="" class="img-item">
+                <span class="not-bold">Rolex Daytona Rolex Submariner Rolex Milgauss Automatic watch, rolex, watch Accessory, gold, rolex</span>
+                <span class="cost-item">$42.800</span>
+                <button class="botton-item">Add to Cart</button>
+            </div>
+        </div>
+        <div class="cart" id="cart">
+            <div class="header-cart">
+                <h2>The Cart</h2>
+            </div>
+
+            <div class="cart-items">
+               
+                <div class="cart-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="cart-item-details">
+                        <span class="cart-item-title">Box Engasse</span>
+                        <div class="selector-amount">
+                            <i class="fa-solid fa-minus restar-amount"></i>
+                            <input type="text" value="1" class="cart-item-amount" disabled>
+                            <i class="fa-solid fa-plus sumar-amount"></i>
+                        </div>
+                        <span class="cart-item-cost">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminate">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="cart-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="cart-item-details">
+                        <span class="cart-item-title">Skin Glam</span>
+                        <div class="selector-amount">
+                            <i class="fa-solid fa-minus restar-amount"></i>
+                            <input type="text" value="3" class="cart-item-amount" disabled>
+                            <i class="fa-solid fa-plus sumar-amount"></i>
+                        </div>
+                        <span class="cart-item-cost">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminate">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 
+            </div>
+            <div class="cart-total">
+                <div class="fila">
+                    <strong>Total</strong>
+                    <span class="cart-cost-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pay">Confirm Order <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+          <h4>Sign Up for Newsletters</h4>
+          <p>Get Email updates about our latest shop and <span> special offers.</span> </p>
+        </div>
+          <div class="form">
+          <input type="text" placeholder="Your email address">
+             <button class="btn normal">Sign Up</button>
+          </div>
+         
+        </div>
+        
+      </section>
+    <footer>
+        <div class="footer-second">
+            <div class="footer-column-1">
+                <h3>News</h3>
+                <a href="#"></a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">dolor sit</a>
+            </div>
+            <div class="footer-column-2">
+                <h3>Customer service</h3>
+                <a href="#">Contact</a>
+                <a href="#">Track your order</a>
+                <a href="#">terms of purchase</a>
+                <a href="#">common questions</a>
+            </div>
+            <div class="footer-column-3">
+                <h3>About us</h3>
+                <a href="#">Who we are</a>
+                <a href="#">Our Services</a>
+                <a href="#">Events</a>
+                <a href="#">Data protection</a>
+            </div>
+        </div>
+        <ul class="footer-last">
+            <li>
+                <p><i class="fab fa-cc-mastercard"></i></p>
+            </li>
+            <li>
+                <p><i class="fab fa-cc-paypal"></i></p>
+            </li>
+            <li>
+                <p><i class="fab fa-cc-visa"></i></p>
+            </li>
+            <li>
+                <p><i class="fab fa-cc-amex"></i></p>
+            </li>
+        </ul>
+    </footer>
+    <script src="JS/script.js"></script>
+    <script src="shopping-cart.js"></script>
+</body>
+</html>
